@@ -1,10 +1,13 @@
 import LogoImg from "@/app/images/logo.png";
 import Image from "next/image";
+import Navbar from "./navbar";
 
 export default function Header() {
   return (
     <>
       <header className="header" role="banner">
+        <Navbar />
+
         <div className="flex items-center justify-center ">
           <Image
             src={LogoImg}
