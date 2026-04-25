@@ -8,7 +8,9 @@ export default function Body(): React.ReactNode {
       <main>
         <div className="max-w-4xl mx-auto px-4 container">
           <div className="mt-4">
-    <button className="rounded-full p-1 cursor-pointer w-full hover:bg-gray-300 bg-white shadow-2xl shadow-black/40 transition-shadow duration-200 hover:shadow-black/50">              <div className="p-2 relative">
+            <button className="rounded-full p-1 cursor-pointer w-full hover:bg-gray-300 bg-white shadow-2xl shadow-black/40 transition-shadow duration-200 hover:shadow-black/50">
+              {" "}
+              <div className="p-2 relative">
                 <Image
                   src={LogoImg}
                   alt="Background"
@@ -27,6 +29,9 @@ export default function Body(): React.ReactNode {
               </div>
             </button>
           </div>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 container">
+          <ApplicationForm />
         </div>
       </main>
     </>

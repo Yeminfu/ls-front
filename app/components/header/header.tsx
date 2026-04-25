@@ -7,7 +7,6 @@ export default function Header() {
     <>
       <header className="header" role="banner">
         <Navbar />
-
         <div className="flex items-center justify-center ">
           <Image
             src={LogoImg}
@@ -19,13 +18,14 @@ export default function Header() {
           />
         </div>
         <div className="mt-5">
-          <div className="flex items-center justify-center ">
-            <h1 className="text-1xl font-bold">
-              ДОБРОВОЛЬЧЕСКИЙ ПОИСКОВО-СПАСАТЕЛЬНЫЙ ОТРЯД ‌ «ЛИГА СПАС»
-            </h1>
+          <div className="max-w-4xl mx-auto px-4 container">
+            <div className="flex items-center justify-center ">
+              <h1 className="text-1xl font-bold">
+                ДОБРОВОЛЬЧЕСКИЙ <span>ПОИСКОВО-СПАСАТЕЛЬНЫЙ</span> ОТРЯД ‌ «ЛИГА СПАС»
+              </h1>
+            </div>
           </div>
         </div>
-
         <div className="mt-5">
           <div className="max-w-4xl mx-auto px-4 container">
             Отряд существует с 2016 года, действует на территории Хабаровского
@@ -36,7 +36,6 @@ export default function Header() {
             региональным отделением Национального центра помощи.
           </div>
         </div>
-
         <div className="mt-5">
           <div className="max-w-4xl mx-auto px-4 container">
             <div className="flex items-center justify-center ">
