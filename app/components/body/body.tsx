@@ -113,64 +113,61 @@ export default function Body(): React.ReactNode {
                   desciption:
                     "Информационный и физический поиск пропавших людей. Незамедлительное реагирование по случаям пропади детей, пожилых людей и людей с физическими или ментальными особенностями. Круглосуточная горячая линия",
                 },
-                {
-                  title: `Ольга Щукина, позывной «Ёлка»`,
-                  desciption:
-                    "Информационный и физический поиск пропавших людей. Незамедлительное реагирование по случаям пропади детей, пожилых людей и людей с физическими или ментальными особенностями. Круглосуточная горячая линия",
-                },{
-                  title: `Ольга Щукина, позывной «Ёлка»`,
-                  desciption:
-                    "Информационный и физический поиск пропавших людей. Незамедлительное реагирование по случаям пропади детей, пожилых людей и людей с физическими или ментальными особенностями. Круглосуточная горячая линия",
-                },{
-                  title: `Ольга Щукина, позывной «Ёлка»`,
-                  desciption:
-                    "Информационный и физический поиск пропавших людей. Незамедлительное реагирование по случаям пропади детей, пожилых людей и людей с физическими или ментальными особенностями. Круглосуточная горячая линия",
-                },
                 // {
-                //   title: `ЗАНЯТИЯ ПО БЕЗОПАСНОСТИ`,
+                //   title: `Ольга Щукина, позывной «Ёлка»`,
                 //   desciption:
-                //     "Тренеры проводят уроки с детьми и родительские обучения. Работа направлена на выстраивание в семье системы безопасности для ребёнка и предотвращение случаев пропажи среди детей",
+                //     "Информационный и физический поиск пропавших людей. Незамедлительное реагирование по случаям пропади детей, пожилых людей и людей с физическими или ментальными особенностями. Круглосуточная горячая линия",
                 // },
                 // {
-                //   title: `СОЦИАЛЬНАЯ ПОМОЩЬ`,
-                //   desciption: "Помогаем малообеспеченным и многодетным семьям",
-                // },
-                // {
-                //   title: `СВО`,
+                //   title: `Ольга Щукина, позывной «Ёлка»`,
                 //   desciption:
-                //     "С 2022 года мы помогаем мобилизованным и военнослужащим дальневосточникам на СВО. Отправляем вещи первой необходимости, одежду, медикаменты, перевязочный материал, снаряжение. Группа в Telegram:",
+                //     "Информационный и физический поиск пропавших людей. Незамедлительное реагирование по случаям пропади детей, пожилых людей и людей с физическими или ментальными особенностями. Круглосуточная горячая линия",
                 // },
                 // {
-                //   title: `МЕДИА ГРУППА`,
+                //   title: `Ольга Щукина, позывной «Ёлка»`,
                 //   desciption:
-                //     "Создание контента, освещение деятельности отряда в социальных сетях, работа со СМИ",
+                //     "Информационный и физический поиск пропавших людей. Незамедлительное реагирование по случаям пропади детей, пожилых людей и людей с физическими или ментальными особенностями. Круглосуточная горячая линия",
                 // },
-                // {
-                //   title: `ТЕХНИЧЕСКОЕ ОБЕСПЕЧЕНИЕ`,
-                //   desciption:
-                //     "Мониторинг оборудования, тестирование, установка и применение в деятельности отряда",
-                // },
-              ]
-                // Array.from({ length: 6 })
-                .map((item, i) => {
-                  return (
-                    <div key={i} className="text-center rounded-lg p-4">
-                      <div className="max-w-sm rounded overflow-hidden shadow-lg">
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiB2aWV3Qm94PSIwIDAgNDAwIDI1MCI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFlM2E4ZiIvPgogIDx0ZXh0IHg9IjUwJSIgeT0iMzUlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZpbGw9IiNmZmRlNTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJib2xkIj5IQUxMPC90ZXh0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNjAlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZpbGw9IiNmZmRlNTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJib2xkIj5KRU5UPC90ZXh0PgogIDx0ZXh0IHg9IjUwJSIgeT0iODUlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzYiIGZpbGw9IiM5MGNhZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlRPTkFCVVM8L3RleHQ+Cjwvc3ZnPg==" alt="Текст HALL JEHT TONABUS"/>  {/* <img className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"/> */}
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">{item.title}</div>
-    <p className="text-gray-700 text-base">
-      Руководитель ДПСО «Лига Спас», региональный директор Национального центра помощи детям в ДФО.
-Моя задача — эффективная команда, где каждый поисковик ценен и важен, где каждый знает, ради чего он в отряде. У отряда есть поддержка, это наши семьи, это люди, которые выходят с нами в поиски, которые делают репосты ориентировок. Спасибо каждому за эту бесценную помощь.
-    </p>
-  </div>
-  {/* <div className="px-6 pt-4 pb-2">
+              ].map((item, i) => {
+                return (
+                  <div key={i} className="text-center rounded-lg p-4">
+                    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                      {(() => {
+                        return (
+                          <img src="https://taplink.st/p/9/2/a/4/68397240.jpg?1" />
+                          // <Image
+                          //   src="https://taplink.st/p/9/2/a/4/68397240.jpg?1"
+                          //   alt="Description"
+                          //   width={0}
+                          //   height={0}
+                          //   sizes="100vw"
+                          //   className="w-full h-auto"
+                          // />
+                        );
+                      })()}
+                      {/* <img className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"/> */}
+                      <div className="px-6 py-4">
+                        <div className="font-bold text-m mb-2">
+                          {item.title}
+                        </div>
+                        <p className="text-gray-700 text-base">
+                          Руководитель ДПСО «Лига Спас», региональный директор
+                          Национального центра помощи детям в ДФО. Моя задача —
+                          эффективная команда, где каждый поисковик ценен
+                          и важен, где каждый знает, ради чего он в отряде.
+                          У отряда есть поддержка, это наши семьи, это люди,
+                          которые выходят с нами в поиски, которые делают
+                          репосты ориентировок. Спасибо каждому за эту бесценную
+                          помощь.
+                        </p>
+                      </div>
+                      {/* <div className="px-6 pt-4 pb-2">
     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
   </div> */}
-</div>
-                      {/* <div className="flex items-center justify-center mb-2">
+                    </div>
+                    {/* <div className="flex items-center justify-center mb-2">
                         <figure>
                           <svg
                             role="none"
@@ -195,12 +192,12 @@ export default function Body(): React.ReactNode {
                         {item.desciption}
                        
                       </div> */}
-                    </div>
-                  );
-                })}
+                  </div>
+                );
+              })}
             </div>
           </div>
-        </div>  
+        </div>
       </main>
     </>
   );
