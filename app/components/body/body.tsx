@@ -171,6 +171,40 @@ export default function Body(): React.ReactNode {
             </div>
           </div>
         </div>
+        <div className="mt-4">
+          <div className="max-w-5xl mx-auto px-4 container">
+            <div className="text-center text-2xl font-bold">НЕ НАЙДЕННЫЕ</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+              {[
+                {
+                  title: `НЕ НАЙДЕНЫ`,
+                  desciption:
+                    "Этих и других людей дома ждут близкие. Если у вас есть какая-либо информация, свяжитесь с нами по телефонам, указанным в ориентировках. Возможно, именно ваш отклик поможет в поиске.",
+                },
+              ].map((item, i) => {
+                return (
+                  <div key={i} className="rounded-lg p-4">
+                    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                      {(() => {
+                        return (
+                          <img src="https://taplink.st/p/8/0/1/8/68397655.png?1" />
+                        );
+                      })()}
+                      <div className="px-6 py-4">
+                        <div className="font-bold text-m mb-2">
+                          {item.title}
+                        </div>
+                        <p className="text-gray-700 text-base">
+                          {item.desciption}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
