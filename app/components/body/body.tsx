@@ -137,6 +137,40 @@ export default function Body(): React.ReactNode {
             </div>
           </div>
         </div>
+        <div className="mt-4">
+          <div className="max-w-5xl mx-auto px-4 container">
+            <div className="text-center text-2xl font-bold">ГАЛЕРЕЯ</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+              {[
+                {
+                  title: `«Он просто переходил дорогу, то туда, то обратно»`,
+                  desciption:
+                    "25 июля, девятый час вечера. Хабаровчанин с другом двигался в потоке других машин по Карла Маркса, когда заметил странную картину: пожилой человек никак не мог определиться, на какую сторону улицы ему нужно. «Он просто переходил дорогу, то туда, то обратно», — вспоминает автомобилист Фёдор. Это насторожило водителя......",
+                },
+              ].map((item, i) => {
+                return (
+                  <div key={i} className="rounded-lg p-4">
+                    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                      {(() => {
+                        return (
+                          <img src="https://taplink.st/p/5/1/0/1/68397560.jpg?0" />
+                        );
+                      })()}
+                      <div className="px-6 py-4">
+                        <div className="font-bold text-m mb-2">
+                          {item.title}
+                        </div>
+                        <p className="text-gray-700 text-base">
+                          {item.desciption}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
