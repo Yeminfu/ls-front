@@ -6,7 +6,7 @@ export default function Body(): React.ReactNode {
   return (
     <>
       <main>
-        <div className="max-w-4xl mx-auto px-4 container">
+        <div className="max-w-5xl mx-auto px-4 container">
           <div className="mt-4">
             <button className="rounded-full p-1 cursor-pointer w-full hover:bg-gray-300 bg-white shadow-2xl shadow-black/40 transition-shadow duration-200 hover:shadow-black/50">
               {" "}
@@ -30,8 +30,8 @@ export default function Body(): React.ReactNode {
             </button>
           </div>
         </div>
-        <div className="mt-4">
-          <div className="max-w-4xl mx-auto px-4 container">
+        <div className="mt-7">
+          <div className="max-w-5xl mx-auto px-4 container">
             <div className="text-center text-2xl font-bold">НАПРАВЛЕНИЯ</div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
@@ -104,7 +104,7 @@ export default function Body(): React.ReactNode {
           </div>
         </div>
         <div className="mt-4">
-          <div className="max-w-4xl mx-auto px-4 container">
+          <div className="max-w-5xl mx-auto px-4 container">
             <div className="text-center text-2xl font-bold">НАША КОМАНДА</div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
               {[

@@ -16,6 +16,8 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 w-full bg-white shadow-md z-50">
+        <div className=''>
+
         <div className="flex justify-between items-center px-4 h-16">
           {/* Логотип */}
           <Link href="/" className="text-xl font-bold text-orange-500">
@@ -69,6 +71,7 @@ export default function Navbar() {
             </div>
           </div>
         )}
+        </div>
       </nav>
       <div className="h-16" />
     </>

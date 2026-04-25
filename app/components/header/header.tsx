@@ -18,16 +18,16 @@ export default function Header() {
           />
         </div>
         <div className="mt-5">
-          <div className="max-w-4xl mx-auto px-4 container">
+          <div className="max-w-5xl mx-auto px-4 container">
             <div className="flex items-center justify-center">
-              <h1 className="text-1xl font-bold">
-                ДОБРОВОЛЬЧЕСКИЙ <span>ПОИСКОВО-СПАСАТЕЛЬНЫЙ</span> ОТРЯД ‌ «ЛИГА СПАС»
+              <h1 className="text-2xl font-bold">
+                ДОБРОВОЛЬЧЕСКИЙ <span className="whitespace-nowrap">ПОИСКОВО-СПАСАТЕЛЬНЫЙ</span>{' '}<span className="whitespace-nowrap">ОТРЯД ‌ «ЛИГА СПАС»</span>
               </h1>
             </div>
           </div>
         </div>
         <div className="mt-5">
-          <div className="max-w-4xl mx-auto px-4 container">
+          <div className="max-w-5xl mx-auto px-4 container">
             Отряд существует с 2016 года, действует на территории Хабаровского
             края и Еврейской автономной области, является некоммерческой
             организацией и одним из сильнейших поисковых отрядов нашей страны.
@@ -37,7 +37,7 @@ export default function Header() {
           </div>
         </div>
         <div className="mt-5">
-          <div className="max-w-4xl mx-auto px-4 container">
+          <div className="max-w-5xl mx-auto px-4 container">
             <div className="flex items-center justify-center">
               <div>
                 <span style={{ color: "#fd7e14" }} className="text-2xl">
