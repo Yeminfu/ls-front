@@ -5,6 +5,10 @@
   --foreground: #171717;
 }
 
+.fox-orange{
+  fill: #fd7e14;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
