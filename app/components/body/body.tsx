@@ -1,6 +1,7 @@
 import LogoImg from "@/app/images/logo.png";
 import Image from "next/image";
 import React from "react";
+import { Faq } from "../faql";
 
 export default function Body(): React.ReactNode {
   return (
@@ -119,7 +120,7 @@ export default function Body(): React.ReactNode {
                     <div className="max-w-sm rounded overflow-hidden shadow-lg">
                       {(() => {
                         return (
-                          <img src="https://taplink.st/p/9/2/a/4/68397240.jpg?1" />
+                          <img src="/68397240.jpg" />
                         );
                       })()}
                       <div className="px-6 py-4">
@@ -153,7 +154,7 @@ export default function Body(): React.ReactNode {
                     <div className="max-w-sm rounded overflow-hidden shadow-lg">
                       {(() => {
                         return (
-                          <img src="https://taplink.st/p/5/1/0/1/68397560.jpg?0" />
+                          <img src="./68397560.jpg" />
                         );
                       })()}
                       <div className="px-6 py-4">
@@ -174,7 +175,7 @@ export default function Body(): React.ReactNode {
         <div className="mt-4">
           <div className="max-w-5xl mx-auto px-4 container">
             <div className="text-center text-2xl font-bold">НЕ НАЙДЕННЫЕ</div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+            <div className="">
               {[
                 {
                   title: `НЕ НАЙДЕНЫ`,
@@ -183,11 +184,15 @@ export default function Body(): React.ReactNode {
                 },
               ].map((item, i) => {
                 return (
-                  <div key={i} className="rounded-lg p-4">
-                    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                  <div key={i} className=" p-4">
+                    <div className=" shadow-lg rounded-lg overflow-hidden">
                       {(() => {
                         return (
-                          <img src="https://taplink.st/p/8/0/1/8/68397655.png?1" />
+                          <img
+                            style={{ width: "100%" }}
+                            alt=""
+                            src="/68397655.png"
+                          />
                         );
                       })()}
                       <div className="px-6 py-4">
@@ -204,6 +209,10 @@ export default function Body(): React.ReactNode {
               })}
             </div>
           </div>
+        </div>
+
+        <div className="mt-4">
+          <Faq />
         </div>
       </main>
     </>
