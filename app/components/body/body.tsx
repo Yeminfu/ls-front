@@ -1,7 +1,7 @@
 import LogoImg from "@/app/images/logo.png";
 import Image from "next/image";
 import React from "react";
-import { Faq } from "../faql";
+import { Faq } from "../faq";
 
 export default function Body(): React.ReactNode {
   return (
@@ -22,8 +22,6 @@ export default function Body(): React.ReactNode {
                   priority
                 />
                 <div className="text-center relative z-10">
-                  {" "}
-                  {/* ← z-10 для текста */}
                   <div>СТАТЬ ДОБРОВОЛЬЦЕМ</div>
                   <div>стать частью команды</div>
                 </div>
@@ -93,10 +91,6 @@ export default function Body(): React.ReactNode {
                       </div>
                       <div>
                         {item.desciption}
-                        {/* Информационный и физический поиск пропавших людей.
-                        Незамедлительное реагирование по случаям пропади детей,
-                        пожилых людей и людей с физическими или ментальными
-                        особенностями. Круглосуточная горячая линия */}
                       </div>
                     </div>
                   );

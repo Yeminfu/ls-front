@@ -3,16 +3,8 @@
 import { useEffect, useState } from "react";
 
 export function Faq() {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <div
-        onClick={() => {
-          alert(1213);
-        }}
-      >
-        zzzzzzzzzzz
-      </div>
       <div className="container">
         <div className="bg-black ">
           <div className="py-4 max-w-5xl mx-auto px-4  ">
@@ -34,32 +26,41 @@ export function Faq() {
               <div
                 key={i}
                 className="mt-2"
-                onClick={() => {
-                  console.log(12312);
-                  // setIsOpen(!isOpen);
-                }}
+                // onClick={() => {
+                //   setIsOpen(true);
+                // }}
               >
-                <div className="bg-white p-2">
-                  <div role="button">
-                    <div>
-                      {x.title} {JSON.stringify(["isOpen", isOpen])}
-                    </div>
-                  </div>
-
-                  <div
-                    style={{
-                      maxHeight: isOpen ? "100px" : "0px",
-                      overflow: "hidden",
-                    }}
-                  >
-                    {x.desciption}
-                  </div>
-                </div>
+                <Wrapper title={x.title} description={x.desciption} />
               </div>
             ))}
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+function Wrapper(props: { title: string; description: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <>
+      <div className="bg-white p-2">
+        <div
+          onClick={() => {
+            setIsOpen(true);
+          }}
+        >
+          <div>{props.title}</div>
+        </div>
+        <div
+          style={{
+            maxHeight: isOpen ? "100px" : "0px",
+            overflow: "hidden",
+          }}
+        >
+          <div className="py-2">{props.description}</div>
+        </div>
+      </div>
+    </>
   );
 }
