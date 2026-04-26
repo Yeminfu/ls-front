@@ -1,16 +1,17 @@
 "use client";
+
 import LogoImg from "@/app/images/logo.png";
 import Image from "next/image";
 import React from "react";
 import { Faq } from "../faq";
-import { PhoneIcon, MapIcon, MapPinIcon } from "@heroicons/react/24/solid";
+import { PhoneIcon, MapPinIcon } from "@heroicons/react/24/solid";
 import { FaVk, FaTelegram, FaOdnoklassniki } from "react-icons/fa";
 
 export default function Body(): React.ReactNode {
   return (
     <>
       <main>
-        <div className="max-w-5xl mx-auto px-4 container">
+        {/* <div className="max-w-5xl mx-auto px-4 container">
           <div className="mt-4">
             <button className="rounded-full p-1 cursor-pointer w-full hover:bg-gray-300 bg-white shadow-2xl shadow-black/40 transition-shadow duration-200 hover:shadow-black/50">
               {" "}
@@ -31,7 +32,7 @@ export default function Body(): React.ReactNode {
               </div>
             </button>
           </div>
-        </div>
+        </div> */}
         <div className="mt-7">
           <div className="max-w-5xl mx-auto px-4 container">
             <div className="text-center text-2xl font-bold">НАПРАВЛЕНИЯ</div>
