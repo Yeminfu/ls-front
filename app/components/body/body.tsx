@@ -3,7 +3,7 @@ import LogoImg from "@/app/images/logo.png";
 import Image from "next/image";
 import React from "react";
 import { Faq } from "../faq";
-import { PhoneIcon } from "@heroicons/react/24/solid";
+import { PhoneIcon, MapIcon, MapPinIcon } from "@heroicons/react/24/solid";
 import { FaVk, FaTelegram, FaOdnoklassniki } from "react-icons/fa";
 
 export default function Body(): React.ReactNode {
@@ -203,7 +203,11 @@ export default function Body(): React.ReactNode {
         </div>
 
         <div className="mt-4">
-          <Faq />
+          <div className="mt-5">
+            <div className="max-w-5xl mx-auto px-4 container">
+              <Faq />
+            </div>
+          </div>
         </div>
 
         <div className="mt-4">
@@ -215,16 +219,16 @@ export default function Body(): React.ReactNode {
               }}
               className="rounded-full p-1 cursor-pointer w-full hover:bg-gray-300 bg-white shadow-2xl shadow-black/40 transition-shadow duration-200 hover:shadow-black/50 relative"
             >
-              <div className="p-3 relative flex items-center justify-center">
-                {/* Иконка слева, по центру вертикали */}
+              <div className="px-3 py-1 relative flex items-center justify-center">
                 <div className="absolute left-4 top-1/2 -translate-y-1/2">
                   <PhoneIcon className="w-6 h-6 text-blue-500" />
                 </div>
 
-                {/* Текст по центру кнопки */}
                 <div className="text-center">
-                  <div className="font-semibold">ГОРЯЧАЯ ЛИНИЯ</div>
-                  <div className="text-lg font-bold">+7 914 167 37 77</div>
+                  <div className="font-semibold">
+                    ГОРЯЧАЯ ЛИНИЯ <br />
+                    <span className="text-lg font-bold">+7 914 167 37 77</span>
+                  </div>
                 </div>
               </div>
             </button>
@@ -281,33 +285,42 @@ export default function Body(): React.ReactNode {
                   {item.icon}
                 </div>
               ))}
-
-              {/* <div className="flex-1 bg-blue-500 p-4 rounded text-center flex items-center justify-center">
-                <FaVk className="text-white text-2xl" />
-              </div>
-              <div className="flex-1 bg-blue-300 p-4 rounded text-center flex items-center justify-center">
-                <FaTelegram className="text-white text-2xl" />
-              </div>
-              <div className="flex-1 bg-blue-500 p-4 rounded text-center flex items-center justify-center">
-                <FaOdnoklassniki className="text-white text-2xl" />
-              </div>
-              <div className="flex-1 bg-blue-500 p-4 rounded text-center flex items-center justify-center">
-                <FaVk className="text-white text-2xl" />
-              </div> */}
             </div>
           </div>
         </div>
 
-        <iframe
-          id="map_183372688"
-          // frameBorder="0"
-          width="100%"
-          height="240px"
-          src="https://makemap.2gis.ru/widget?data=eJzVjk1OxDAMRu9ittEo6U-a5gCD2M0OCTSLqjEQKa2r1CMxVL07bjscgqwsP-f73gKUA2YMz0gDco44g39fgO8TgoczdnzLCAqmTBNm3vkCPSXKwp904cxHIZwjp-2HjAHnPseJI43H4udlDPgN3ui_tyr4PArvW9yj7UJxZLnvSaTi2PEuY8r6pBttdaUqd6qaVltzlYAYwLfWrerf2BpT6vWqYOimC83xqFwgdQz-OC6a1lWmKAvrFKQNP_KcqysjrLYiSDQIsJIq6pTS6xdietu3nG-4_gIavY2W"
-          sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
-        ></iframe>
+        <div className="mt-5">
+          <div className="max-w-5xl mx-auto px-4 container">
+            <iframe
+              id="map_183372688"
+              width="100%"
+              height="240px"
+              src="https://makemap.2gis.ru/widget?data=eJzVjk1OxDAMRu9ittEo6U-a5gCD2M0OCTSLqjEQKa2r1CMxVL07bjscgqwsP-f73gKUA2YMz0gDco44g39fgO8TgoczdnzLCAqmTBNm3vkCPSXKwp904cxHIZwjp-2HjAHnPseJI43H4udlDPgN3ui_tyr4PArvW9yj7UJxZLnvSaTi2PEuY8r6pBttdaUqd6qaVltzlYAYwLfWrerf2BpT6vWqYOimC83xqFwgdQz-OC6a1lWmKAvrFKQNP_KcqysjrLYiSDQIsJIq6pTS6xdietu3nG-4_gIavY2W"
+              sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+            ></iframe>
+          </div>
 
-        {/* <YandexMap /> */}
+          <div className="mt-5">
+            <div className="max-w-5xl mx-auto px-4 container">
+              <button
+                onClick={() => {
+                  window.location.href = "tel:+79141673777";
+                }}
+                className="rounded-full p-1 cursor-pointer w-full hover:bg-gray-300 bg-white shadow-2xl shadow-black/40 transition-shadow duration-200 hover:shadow-black/50 relative"
+              >
+                <div className="px-3 py-1 relative flex items-center justify-center">
+                  <div className="flex items-center justify-center gap-2 flex-wrap">
+                    <MapPinIcon className="w-6 h-6 text-blue-500 flex-shrink-0" />
+                    <span className="text-base md:text-lg font-bold text-center">
+                      г. Хабаровск, Улица Муравьёва-Амурского, 54 / улица
+                      Гоголя, 31
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
