@@ -300,7 +300,7 @@ export default function Body(): React.ReactNode {
             ></iframe>
           </div>
 
-          <div className="mt-5">
+          <div className="my-5">
             <div className="max-w-5xl mx-auto px-4 container">
               <button
                 onClick={() => {
