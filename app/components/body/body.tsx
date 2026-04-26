@@ -1,9 +1,10 @@
-"use client"
+"use client";
 import LogoImg from "@/app/images/logo.png";
 import Image from "next/image";
 import React from "react";
 import { Faq } from "../faq";
 import { PhoneIcon } from "@heroicons/react/24/solid";
+import { FaVk, FaTelegram, FaOdnoklassniki, ru } from "react-icons/fa";
 
 export default function Body(): React.ReactNode {
   return (
@@ -206,6 +207,7 @@ export default function Body(): React.ReactNode {
         <div className="mt-4">
           <Faq />
         </div>
+
         <div className="mt-4">
           <div className="max-w-5xl mx-auto px-4 container">
             <div className="text-center text-2xl font-bold">КОНТАКТЫ</div>
@@ -228,6 +230,73 @@ export default function Body(): React.ReactNode {
                 </div>
               </div>
             </button>
+          </div>
+        </div>
+
+        <div className="mt-5">
+          <div className="max-w-5xl mx-auto px-4 container">
+            <div className="text-center text-2xl font-bold">НАШИ СОЦСЕТИ</div>
+            <div className="flex gap-4 mt-4">
+              {[
+                {
+                  icon: <FaVk className="text-white text-2xl" />,
+                  backgroundColor: "#0077ff",
+                },
+                {
+                  icon: <FaTelegram className="text-white text-2xl" />,
+                  backgroundColor: "#61a8de",
+                },
+                {
+                  icon: <FaOdnoklassniki className="text-white text-2xl" />,
+                  backgroundColor: "#f7941d",
+                },
+                {
+                  icon: (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 100 100"
+                      width="40"
+                      height="40"
+                    >
+                      <text
+                        x="50"
+                        y="75"
+                        font-family="Arial, sans-serif"
+                        font-size="70"
+                        font-weight="bold"
+                        fill="white"
+                        text-anchor="middle"
+                      >
+                        R
+                      </text>
+                      <circle cx="72" cy="28" r="8" fill="#e91e63" />
+                    </svg>
+                  ),
+                  backgroundColor: "#000000",
+                },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  style={{ backgroundColor: item.backgroundColor }}
+                  className="flex-1 p-4 rounded-full text-center flex items-center justify-center"
+                >
+                  {item.icon}
+                </div>
+              ))}
+
+              {/* <div className="flex-1 bg-blue-500 p-4 rounded text-center flex items-center justify-center">
+                <FaVk className="text-white text-2xl" />
+              </div>
+              <div className="flex-1 bg-blue-300 p-4 rounded text-center flex items-center justify-center">
+                <FaTelegram className="text-white text-2xl" />
+              </div>
+              <div className="flex-1 bg-blue-500 p-4 rounded text-center flex items-center justify-center">
+                <FaOdnoklassniki className="text-white text-2xl" />
+              </div>
+              <div className="flex-1 bg-blue-500 p-4 rounded text-center flex items-center justify-center">
+                <FaVk className="text-white text-2xl" />
+              </div> */}
+            </div>
           </div>
         </div>
       </main>
