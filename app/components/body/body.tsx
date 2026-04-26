@@ -1,12 +1,16 @@
+"use client"
 import LogoImg from "@/app/images/logo.png";
 import Image from "next/image";
 import React from "react";
 import { Faq } from "../faq";
+import { PhoneIcon } from "@heroicons/react/24/solid";
 
 export default function Body(): React.ReactNode {
   return (
     <>
       <main>
+        {/* xxxxxxxxxxxxxxxxxxxx
+              <PhoneXMarkIcon className="size-6 text-blue-500" /> */}
         <div className="max-w-5xl mx-auto px-4 container">
           <div className="mt-4">
             <button className="rounded-full p-1 cursor-pointer w-full hover:bg-gray-300 bg-white shadow-2xl shadow-black/40 transition-shadow duration-200 hover:shadow-black/50">
@@ -89,9 +93,7 @@ export default function Body(): React.ReactNode {
                       <div className="text-1xl font-bold uppercase">
                         {item.title}
                       </div>
-                      <div>
-                        {item.desciption}
-                      </div>
+                      <div>{item.desciption}</div>
                     </div>
                   );
                 })}
@@ -113,9 +115,7 @@ export default function Body(): React.ReactNode {
                   <div key={i} className="rounded-lg p-4">
                     <div className="max-w-sm rounded overflow-hidden shadow-lg">
                       {(() => {
-                        return (
-                          <img src="/68397240.jpg" />
-                        );
+                        return <img src="/68397240.jpg" />;
                       })()}
                       <div className="px-6 py-4">
                         <div className="font-bold text-m mb-2">
@@ -147,9 +147,7 @@ export default function Body(): React.ReactNode {
                   <div key={i} className="rounded-lg p-4">
                     <div className="max-w-sm rounded overflow-hidden shadow-lg">
                       {(() => {
-                        return (
-                          <img src="./68397560.jpg" />
-                        );
+                        return <img src="./68397560.jpg" />;
                       })()}
                       <div className="px-6 py-4">
                         <div className="font-bold text-m mb-2">
@@ -207,6 +205,30 @@ export default function Body(): React.ReactNode {
 
         <div className="mt-4">
           <Faq />
+        </div>
+        <div className="mt-4">
+          <div className="max-w-5xl mx-auto px-4 container">
+            <div className="text-center text-2xl font-bold">КОНТАКТЫ</div>
+            <button
+              onClick={() => {
+                window.location.href = "tel:+79141673777";
+              }}
+              className="rounded-full p-1 cursor-pointer w-full hover:bg-gray-300 bg-white shadow-2xl shadow-black/40 transition-shadow duration-200 hover:shadow-black/50 relative"
+            >
+              <div className="p-3 relative flex items-center justify-center">
+                {/* Иконка слева, по центру вертикали */}
+                <div className="absolute left-4 top-1/2 -translate-y-1/2">
+                  <PhoneIcon className="w-6 h-6 text-blue-500" />
+                </div>
+
+                {/* Текст по центру кнопки */}
+                <div className="text-center">
+                  <div className="font-semibold">ГОРЯЧАЯ ЛИНИЯ</div>
+                  <div className="text-lg font-bold">+7 914 167 37 77</div>
+                </div>
+              </div>
+            </button>
+          </div>
         </div>
       </main>
     </>
