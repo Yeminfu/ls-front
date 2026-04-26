@@ -4,14 +4,12 @@ import Image from "next/image";
 import React from "react";
 import { Faq } from "../faq";
 import { PhoneIcon } from "@heroicons/react/24/solid";
-import { FaVk, FaTelegram, FaOdnoklassniki, ru } from "react-icons/fa";
+import { FaVk, FaTelegram, FaOdnoklassniki } from "react-icons/fa";
 
 export default function Body(): React.ReactNode {
   return (
     <>
       <main>
-        {/* xxxxxxxxxxxxxxxxxxxx
-              <PhoneXMarkIcon className="size-6 text-blue-500" /> */}
         <div className="max-w-5xl mx-auto px-4 container">
           <div className="mt-4">
             <button className="rounded-full p-1 cursor-pointer w-full hover:bg-gray-300 bg-white shadow-2xl shadow-black/40 transition-shadow duration-200 hover:shadow-black/50">
@@ -299,6 +297,17 @@ export default function Body(): React.ReactNode {
             </div>
           </div>
         </div>
+
+        <iframe
+          id="map_183372688"
+          // frameBorder="0"
+          width="100%"
+          height="240px"
+          src="https://makemap.2gis.ru/widget?data=eJzVjk1OxDAMRu9ittEo6U-a5gCD2M0OCTSLqjEQKa2r1CMxVL07bjscgqwsP-f73gKUA2YMz0gDco44g39fgO8TgoczdnzLCAqmTBNm3vkCPSXKwp904cxHIZwjp-2HjAHnPseJI43H4udlDPgN3ui_tyr4PArvW9yj7UJxZLnvSaTi2PEuY8r6pBttdaUqd6qaVltzlYAYwLfWrerf2BpT6vWqYOimC83xqFwgdQz-OC6a1lWmKAvrFKQNP_KcqysjrLYiSDQIsJIq6pTS6xdietu3nG-4_gIavY2W"
+          sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+        ></iframe>
+
+        {/* <YandexMap /> */}
       </main>
     </>
   );
