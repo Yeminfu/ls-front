@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 export function Faq() {
   return (
     <div>
-      <div className="container">
+      <div>
         <div className="bg-black ">
-          <div className="py-4 max-w-5xl mx-auto px-4  ">
+          <div className="py-4 px-4  ">
             <div className="text-1xl font-bold text-white">
               ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
             </div>
@@ -44,7 +44,7 @@ function Wrapper(props: { title: string; description: string }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="bg-white p-2">
+      <div className="bg-white text-black p-2">
         <div
           onClick={() => {
             setIsOpen(true);
