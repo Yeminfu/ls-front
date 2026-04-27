@@ -220,7 +220,7 @@ export default function Body(): React.ReactNode {
                 </div>
 
                 <div className="text-center">
-                  <div className="font-semibold">
+                  <div className="font-semibold text-black">
                     ГОРЯЧАЯ ЛИНИЯ <br />
                     <span className="text-lg font-bold">+7 914 167 37 77</span>
                   </div>
@@ -269,7 +269,7 @@ export default function Body(): React.ReactNode {
                       <circle cx="72" cy="28" r="8" fill="#e91e63" />
                     </svg>
                   ),
-                  backgroundColor: "#000000",
+                  backgroundColor: "#302f2f",
                 },
               ].map((item, i) => (
                 <div
@@ -297,22 +297,17 @@ export default function Body(): React.ReactNode {
 
           <div className="my-5">
             <div className="max-w-5xl mx-auto px-4 container">
-              <button
-                onClick={() => {
-                  window.location.href = "tel:+79141673777";
-                }}
-                className="rounded-full p-1 cursor-pointer w-full hover:bg-gray-300 bg-white shadow-2xl shadow-black/40 transition-shadow duration-200 hover:shadow-black/50 relative"
-              >
+              <div className="rounded-full p-1 cursor-pointer w-full bg-white shadow-2xl  relative">
                 <div className="px-3 py-1 relative flex items-center justify-center">
                   <div className="flex items-center justify-center gap-2 flex-wrap">
                     <MapPinIcon className="w-6 h-6 text-blue-500 flex-shrink-0" />
-                    <span className="text-base md:text-lg font-bold text-center">
+                    <span className="text-base md:text-lg font-bold text-center text-black">
                       г. Хабаровск, Улица Муравьёва-Амурского, 54 / улица
                       Гоголя, 31
                     </span>
                   </div>
                 </div>
-              </button>
+              </div>
             </div>
           </div>
         </div>
