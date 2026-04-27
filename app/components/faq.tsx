@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 export function Faq() {
   return (
     <div>
-      <div className="container">
+      <div>
         <div className="bg-black ">
-          <div className="py-4 max-w-5xl mx-auto px-4  ">
+          <div className="py-4 px-4  ">
             <div className="text-1xl font-bold text-white">
               ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
             </div>
