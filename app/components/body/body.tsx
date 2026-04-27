@@ -238,47 +238,54 @@ export default function Body(): React.ReactNode {
                 {
                   icon: <FaVk className="text-white text-2xl" />,
                   backgroundColor: "#0077ff",
+                  url: "https://vk.com/ligaspas",
                 },
                 {
                   icon: <FaTelegram className="text-white text-2xl" />,
                   backgroundColor: "#61a8de",
+                  url: "https://t.me/ligaspas",
                 },
                 {
                   icon: <FaOdnoklassniki className="text-white text-2xl" />,
                   backgroundColor: "#f7941d",
+                  url: "https://ok.ru/ligaspas",
                 },
                 {
                   icon: (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 100 100"
-                      width="40"
-                      height="40"
-                    >
-                      <text
-                        x="50"
-                        y="75"
-                        font-family="Arial, sans-serif"
-                        font-size="70"
-                        font-weight="bold"
-                        fill="white"
-                        text-anchor="middle"
-                      >
-                        R
-                      </text>
-                      <circle cx="72" cy="28" r="8" fill="#e91e63" />
-                    </svg>
+                    <span className="text-white font-bold">MAX</span>
+                    // <svg
+                    //   xmlns="http://www.w3.org/2000/svg"
+                    //   viewBox="0 0 100 100"
+                    //   width="40"
+                    //   height="40"
+                    // >
+                    //   <text
+                    //     x="50"
+                    //     y="75"
+                    //     font-family="Arial, sans-serif"
+                    //     font-size="70"
+                    //     font-weight="bold"
+                    //     fill="white"
+                    //     text-anchor="middle"
+                    //   >
+                    //     R
+                    //   </text>
+                    //   <circle cx="72" cy="28" r="8" fill="#e91e63" />
+                    // </svg>
                   ),
                   backgroundColor: "#302f2f",
+                  url: "https://max.ru/id2724250231_biz",
                 },
               ].map((item, i) => (
-                <div
+                <a
+                  href={item.url}
+                  target="blank"
                   key={i}
                   style={{ backgroundColor: item.backgroundColor }}
                   className="flex-1 p-4 rounded-full text-center flex items-center justify-center"
                 >
                   {item.icon}
-                </div>
+                </a>
               ))}
             </div>
           </div>
