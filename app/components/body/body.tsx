@@ -121,9 +121,7 @@ export default function Body(): React.ReactNode {
                         <div className="font-bold text-m mb-2">
                           {item.title}
                         </div>
-                        <p className="text-gray-700 text-base">
-                          {item.desciption}
-                        </p>
+                        <p>{item.desciption}</p>
                       </div>
                     </div>
                   </div>
@@ -153,9 +151,7 @@ export default function Body(): React.ReactNode {
                         <div className="font-bold text-m mb-2">
                           {item.title}
                         </div>
-                        <p className="text-gray-700 text-base">
-                          {item.desciption}
-                        </p>
+                        <p>{item.desciption}</p>
                       </div>
                     </div>
                   </div>
@@ -191,9 +187,7 @@ export default function Body(): React.ReactNode {
                         <div className="font-bold text-m mb-2">
                           {item.title}
                         </div>
-                        <p className="text-gray-700 text-base">
-                          {item.desciption}
-                        </p>
+                        <p>{item.desciption}</p>
                       </div>
                     </div>
                   </div>

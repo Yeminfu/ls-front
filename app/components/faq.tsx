@@ -44,7 +44,7 @@ function Wrapper(props: { title: string; description: string }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="bg-white p-2">
+      <div className="bg-white text-black p-2">
         <div
           onClick={() => {
             setIsOpen(true);
