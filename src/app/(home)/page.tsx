@@ -4,7 +4,7 @@ import { CAUSES } from "./data/causes.data";
 
 export const metadata: Metadata = {
   icons: {
-    icon: "v", 
+    icon: "v",
     apple: "./images/icon.jpg",
   },
 };
@@ -12,9 +12,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {CAUSES.map((cause, i) => (
-        <Cause key={i} cause={cause} />
-      ))}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {CAUSES.map((cause, i) => (
+          <Cause key={i} cause={cause} />
+        ))}
+      </div>
     </>
   );
 }

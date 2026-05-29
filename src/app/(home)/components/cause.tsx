@@ -6,9 +6,13 @@ interface Props {
 
 export function Cause({ cause }: Props) {
   return (
-    <div>
-      <p>{cause.title}</p>
-      <p>{cause.description}</p>
+    <div className="flex flex-col gap-3 p-5 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+      <h3 className="text-xl font-bold uppercase tracking-wide text-gray-900">
+        {cause.title}
+      </h3>
+      <p className="text-base text-gray-600 leading-relaxed line-clamp-3">
+        {cause.description}
+      </p>
     </div>
   );
 }
