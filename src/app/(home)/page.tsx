@@ -2,6 +2,7 @@
 // import Footer from "./components/footer";
 // import Header from "./components/header/header";
 import type { Metadata } from "next";
+import { Cause } from "./components/cause";
 
 export const metadata: Metadata = {
   icons: {
@@ -14,9 +15,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {/* <Header />
-      <Body />
-      <Footer /> */}
+      <Cause
+        cause={{
+          title: "title",
+          description: "description",
+        }}
+      />
     </>
   );
 }

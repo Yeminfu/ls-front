@@ -21,7 +21,9 @@ export default function Header() {
           <div className="max-w-5xl mx-auto px-4 container">
             <div className="flex items-center justify-center">
               <h1 className="text-2xl font-bold">
-                ДОБРОВОЛЬЧЕСКИЙ <span className="whitespace-nowrap">ПОИСКОВО-СПАСАТЕЛЬНЫЙ</span>{' '}<span className="whitespace-nowrap">ОТРЯД ‌ «ЛИГА СПАС»</span>
+                ДОБРОВОЛЬЧЕСКИЙ{" "}
+                <span className="whitespace-nowrap">ПОИСКОВО-СПАСАТЕЛЬНЫЙ</span>{" "}
+                <span className="whitespace-nowrap">ОТРЯД ‌ «ЛИГА СПАС»</span>
               </h1>
             </div>
           </div>
