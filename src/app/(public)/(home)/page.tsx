@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Cause } from "./components/cause";
 import { CAUSES } from "./data/causes.data";
 import { TEAM } from "./data/team.data";
@@ -15,60 +16,130 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div>
-      <section aria-label="Направления деятельности" className="scroll-mt-20">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl font-bold text-slate-800">
-            Наши направления
-          </h2>
-        </div>
+    <div className="bg-slate-50">
+      <section className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-900 via-slate-800 to-orange-600 px-6 py-20 text-white shadow-2xl lg:px-16 lg:py-28">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_30%)]" />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {CAUSES.map((cause, i) => (
-            <Cause key={i} cause={cause} />
-          ))}
-        </div>
-      </section>
+        <div className="relative z-10 max-w-4xl">
+          <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur">
+            Добровольческий поисково-спасательный отряд
+          </span>
 
-      <section>
-        <div className="mt-4">
-          <div className="max-w-5xl mx-auto px-4 container">
-            <div className="text-center text-2xl font-bold">НАША КОМАНДА</div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
-              {
-                TEAM.map((teammate, i) => {
-                  return (
-                    <div key={i} className="rounded-lg p-4">
-                      <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                        {(() => {
-                          return <img src={teammate.image} />;
-                        })()}
-                        <div className="px-6 py-4">
-                          <div className="font-bold text-m mb-2">
-                            {teammate.title}
-                          </div>
-                          <p>{teammate.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })
-              }
-            </div>
+          <h1 className="mt-6 text-5xl font-black leading-tight lg:text-7xl">
+            Помогаем находить людей и спасать жизни
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
+            «Лига Спас» — команда добровольцев, координаторов и специалистов,
+            которые ежедневно участвуют в поисково-спасательных операциях и
+            помогают людям в критических ситуациях.
+          </p>
+
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <button className="rounded-2xl bg-white px-8 py-4 text-sm font-bold text-orange-600 shadow-xl transition hover:scale-[1.02] hover:bg-orange-50">
+              Сообщить о пропаже
+            </button>
+
+            <button className="rounded-2xl border border-white/20 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20">
+              Стать волонтёром
+            </button>
           </div>
         </div>
       </section>
 
-      <section className="mt-20 text-center">
-        <div className="bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl p-8 sm:p-10 text-white">
-          <h3 className="text-2xl font-bold mb-3">Каждая минута на счету</h3>
-          <p className="text-blue-100 mb-6 max-w-xl mx-auto">
-            Присоединяйтесь к команде спасателей или поддержите нас — ваша
-            помощь спасает жизни.
+      <section
+        aria-label="Направления деятельности"
+        className="scroll-mt-20 py-20"
+      >
+        <div className="mb-12 flex items-center justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
+              Направления
+            </p>
+
+            <h2 className="mt-2 text-4xl font-black text-slate-900">
+              Чем мы занимаемся
+            </h2>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {CAUSES.map((cause, i) => (
+            <div
+              key={i}
+              className="group rounded-3xl border border-slate-200 bg-white p-3 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <Cause cause={cause} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
+              Команда
+            </p>
+
+            <h2 className="mt-3 text-4xl font-black text-slate-900">
+              Люди, которые спасают жизни
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {TEAM.map((teammate, i) => {
+              return (
+                <div
+                  key={i}
+                  className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                >
+                  <div className="overflow-hidden">
+                    <Image
+                      src={teammate.image}
+                      alt={teammate.name}
+                      width={600}
+                      height={320}
+                      className="h-[320px] w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </div>
+
+                  <div className="p-8">
+                    <div className="text-2xl font-bold text-slate-900">
+                      {teammate.name}
+                    </div>
+
+                    <p className="mt-4 leading-7 text-slate-600">
+                      {teammate.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24">
+        <div className="rounded-[32px] bg-gradient-to-r from-blue-700 via-blue-600 to-orange-500 px-8 py-16 text-center text-white shadow-2xl sm:px-16">
+          <h3 className="text-4xl font-black">
+            Каждая минута может спасти жизнь
+          </h3>
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-blue-100">
+            Присоединяйтесь к поисково-спасательному отряду, поддержите нас
+            финансово или станьте волонтёром. Вместе мы можем больше.
           </p>
-          <button className="px-8 py-3 bg-white text-blue-700 font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-lg">
-            Связаться с нами
-          </button>
+
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <button className="rounded-2xl bg-white px-8 py-4 text-sm font-bold text-blue-700 shadow-xl transition hover:scale-[1.02] hover:bg-blue-50">
+              Связаться с нами
+            </button>
+
+            <button className="rounded-2xl border border-white/20 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20">
+              Поддержать отряд
+            </button>
+          </div>
         </div>
       </section>
     </div>
