@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Cause } from "./components/cause";
 import { CAUSES } from "./data/causes.data";
-import { Header } from "@/src/shared/header";
 
 export const metadata: Metadata = {
   title: "Лига Спас — Добровольческий поисково-спасательный отряд",
@@ -29,7 +28,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      
+
       <section className="mt-20 text-center">
         <div className="bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl p-8 sm:p-10 text-white">
           <h3 className="text-2xl font-bold mb-3">Каждая минута на счету</h3>
