@@ -1,6 +1,6 @@
-import Body from "./components/body/body";
-import Footer from "./components/footer";
-import Header from "./components/header/header";
+// import Body from "./components/body/body";
+// import Footer from "./components/footer";
+// import Header from "./components/header/header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Body />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
