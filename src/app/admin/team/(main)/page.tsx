@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { TEAM } from "../../(public)/(home)/data/team.data";
+import { TEAM } from "../../../(public)/(home)/data/team.data";
 
 export default function Page() {
   return (
