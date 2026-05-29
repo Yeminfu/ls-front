@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Navbar from "./navbar";
 
 export function Header() {
   return (
     <div>
+      <Navbar/>
       <header className="text-center mb-14 sm:mb-20">
         <div className="inline-flex items-center justify-center">
           <div className="relative">
