@@ -1,22 +1,7 @@
-// import LogoImg from "@/app/images/logo.png";
-import Image from "next/image";
-// import Navbar from "./navbar";
-
 export default function Header() {
   return (
     <>
       <header className="header" role="banner">
-        {/* <Navbar /> */}
-        <div className="flex items-center justify-center">
-          {/* <Image
-            src={LogoImg}
-            alt=""
-            width={95}
-            height={95}
-            className="rounded-full mt-5"
-            placeholder="blur"
-          /> */}
-        </div>
         <div className="mt-5">
           <div className="max-w-5xl mx-auto px-4 container">
             <div className="flex items-center justify-center">
