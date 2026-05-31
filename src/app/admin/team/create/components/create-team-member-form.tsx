@@ -20,9 +20,20 @@ export function CreateTeamMemberForm() {
   } = useForm<FormValues>();
 
   async function onSubmit(data: FormValues) {
-    console.log(data);
+    const formData = new FormData();
 
-    // upload logic
+    formData.append("name", data.name);
+    formData.append("description", data.description);
+    formData.append("image", data.image[0]);
+
+    const response = await fetch("/api/team/create-teammate", {
+      method: "POST",
+      body: formData,
+    });
+
+    const result = await response.json();
+
+    console.log(result);
   }
 
   return (
