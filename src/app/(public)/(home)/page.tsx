@@ -71,7 +71,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-10">
+      {/* <section className="py-10">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
@@ -114,9 +114,9 @@ export default function Home() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="rounded-[32px] bg-gradient-to-r from-blue-700 via-blue-600 to-orange-500 px-8 py-16 text-center text-white shadow-2xl sm:px-16">
           <h3 className="text-4xl font-black">
             Каждая минута может спасти жизнь
@@ -137,7 +137,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
