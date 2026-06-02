@@ -1,22 +1,25 @@
 import Image from "next/image";
 import Navbar from "./navbar";
+import Link from "next/link";
 
 export function Header() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <header className="text-center mb-14 sm:mb-20">
         <div className="inline-flex items-center justify-center">
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 to-orange-400 blur opacity-30 animate-pulse" />
-            <Image
-              src={"/logo.png"}
-              alt="Логотип Лига Спас"
-              width={96}
-              height={96}
-              className="relative rounded-full border-4 border-white shadow-lg"
-              priority
-            />
+            <Link href={"/"}>
+              <Image
+                src={"/logo.png"}
+                alt="Логотип Лига Спас"
+                width={96}
+                height={96}
+                className="relative rounded-full border-4 border-white shadow-lg"
+                priority
+              />
+            </Link>
           </div>
         </div>
 
