@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Cause } from "./components/cause";
 import { CAUSES } from "./data/causes.data";
-import { TEAM } from "./data/team.data";
 
 export const metadata: Metadata = {
   title: "Лига Спас — Добровольческий поисково-спасательный отряд",
