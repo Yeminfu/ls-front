@@ -10,66 +10,87 @@ type MenuItem = {
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
   const menuItems: MenuItem[] = [
     { text: "Главная", link: "/" },
     { text: "Наша команда", link: "/volunteers" },
   ];
+
+  const closeMenu = () => setIsOpen(false);
+
   return (
-    <nav className="w-full border-b border-slate-200 bg-white">
+    <nav className="relative w-full border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <div className="hidden items-center gap-6 md:flex">
-          {menuItems.map((item, i) => (
+          {menuItems.map((item) => (
             <Link
-              key={i}
+              key={item.link}
               href={item.link}
-              className="text-sm font-medium text-slate-700 transition hover:text-orange-500"
+              className="text-sm font-medium text-slate-700 transition-colors hover:text-orange-500"
             >
               {item.text}
             </Link>
           ))}
         </div>
 
-        <button className="hidden rounded-xl bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-orange-600 md:block">
+        <button className="hidden rounded-xl bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-600 md:block">
           Помочь
         </button>
 
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.8}
-            stroke="currentColor"
-            className="h-6 w-6 text-slate-800"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+        <button
+          aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
+          className="relative h-6 w-6 md:hidden"
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
+          <span
+            className={`absolute left-0 block h-0.5 w-6 bg-slate-800 transition-all duration-300 ${
+              isOpen ? "top-3 rotate-45" : "top-1"
+            }`}
+          />
+
+          <span
+            className={`absolute left-0 top-3 block h-0.5 w-6 bg-slate-800 transition-all duration-300 ${
+              isOpen ? "opacity-0" : "opacity-100"
+            }`}
+          />
+
+          <span
+            className={`absolute left-0 block h-0.5 w-6 bg-slate-800 transition-all duration-300 ${
+              isOpen ? "top-3 -rotate-45" : "top-5"
+            }`}
+          />
         </button>
       </div>
 
-      {isOpen && (
-        <div className="border-t border-slate-200 bg-white md:hidden">
-          <div className="flex flex-col px-4 py-4">
-            {menuItems.map((item,i) => (
+      <div
+        className={`absolute left-0 top-full z-50 w-full bg-white shadow-lg transition-all duration-300 ease-out md:hidden ${
+          isOpen
+            ? "translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-2 opacity-0"
+        }`}
+      >
+        <div className="border-t border-slate-200 px-4 py-4">
+          <div className="flex flex-col">
+            {menuItems.map((item) => (
               <Link
-                key={i}
+                key={item.link}
                 href={item.link}
-                className="rounded-lg px-3 py-3 text-sm font-medium text-slate-700 transition hover:bg-orange-50 hover:text-orange-500"
+                onClick={closeMenu}
+                className="rounded-lg px-3 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-orange-50 hover:text-orange-500"
               >
                 {item.text}
               </Link>
             ))}
 
-            <button className="mt-4 rounded-xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
+            <button
+              onClick={closeMenu}
+              className="mt-4 w-full rounded-xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-600"
+            >
               Помочь
             </button>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
