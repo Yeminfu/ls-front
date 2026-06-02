@@ -21,7 +21,7 @@ export default function RootLayout({
           <div className="absolute top-1/2 -left-20 w-60 h-60 bg-orange-100 rounded-full blur-3xl opacity-30" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-6">
           {children}
         </div>
       </main>

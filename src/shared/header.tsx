@@ -6,7 +6,7 @@ export function Header() {
   return (
     <div>
       <Navbar />
-      <header className="my-10 text-center">
+      <header className="my-5 text-center">
         <Link href="/" className="inline-block">
           <Image
             src="/logo.png"

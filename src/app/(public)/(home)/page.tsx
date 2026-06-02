@@ -17,15 +17,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="bg-slate-50">
-      <section className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-900 via-slate-800 to-orange-600 px-6 py-20 text-white shadow-2xl lg:px-16 lg:py-28">
+      <section className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-900 via-slate-800 to-orange-600 px-6 py-10 text-white shadow-2xl lg:px-16 lg:py-18">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_30%)]" />
 
         <div className="relative z-10 max-w-4xl">
-          <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur">
-            Добровольческий поисково-спасательный отряд
-          </span>
-
-          <h1 className="mt-6 text-5xl font-black leading-tight lg:text-7xl">
+          <h1 className="text-5xl font-black leading-tight lg:text-7xl">
             Помогаем находить людей и спасать жизни
           </h1>
 
