@@ -17,9 +17,9 @@ export default function Page() {
         </header>
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {TEAM.map((teammate) => (
+          {TEAM.map((teammate, i) => (
             <article
-              key={teammate.name}
+              key={i}
               className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
             >
               <div className="overflow-hidden">
