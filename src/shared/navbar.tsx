@@ -1,23 +1,31 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
+
+type MenuItem = {
+  text: string;
+  link: string;
+};
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const menuItems = ["О нас", "Поиск", "Волонтёрам", "Новости", "Контакты"];
-
+  const menuItems: MenuItem[] = [
+    { text: "Главная", link: "/" },
+    { text: "Наша команда", link: "/volunteers" },
+  ];
   return (
     <nav className="w-full border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <div className="hidden items-center gap-6 md:flex">
-          {menuItems.map((item) => (
-            <a
-              key={item}
-              href="#"
+          {menuItems.map((item, i) => (
+            <Link
+              key={i}
+              href={item.link}
               className="text-sm font-medium text-slate-700 transition hover:text-orange-500"
             >
-              {item}
-            </a>
+              {item.text}
+            </Link>
           ))}
         </div>
 
@@ -46,14 +54,14 @@ export default function Navbar() {
       {isOpen && (
         <div className="border-t border-slate-200 bg-white md:hidden">
           <div className="flex flex-col px-4 py-4">
-            {menuItems.map((item) => (
-              <a
-                key={item}
-                href="#"
+            {menuItems.map((item,i) => (
+              <Link
+                key={i}
+                href={item.link}
                 className="rounded-lg px-3 py-3 text-sm font-medium text-slate-700 transition hover:bg-orange-50 hover:text-orange-500"
               >
-                {item}
-              </a>
+                {item.text}
+              </Link>
             ))}
 
             <button className="mt-4 rounded-xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
