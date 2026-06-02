@@ -6,34 +6,30 @@ export function Header() {
   return (
     <div>
       <Navbar />
-      <header className="my-5 text-center">
-        <Link href="/" className="inline-block">
-          <Image
-            src="/logo.png"
-            alt="Логотип Лига Спас"
-            width={96}
-            height={96}
-            className="rounded-full border-4 border-white shadow-lg"
-            priority
-          />
-        </Link>
+      <header className="my-6 px-4 text-center">
+  <Link href="/" className="inline-block">
+    <Image
+      src="/logo.png"
+      alt="Логотип Лига Спас"
+      width={96}
+      height={96}
+      className="mx-auto rounded-full border-4 border-white shadow-lg"
+      priority
+    />
+  </Link>
 
-        <h1 className="mt-4 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">
-          Лига Спас
-        </h1>
+  <h1 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
+    Лига Спас
+  </h1>
 
-        <p className="mt-2 text-lg text-slate-600">
-          Добровольческий поисково-спасательный отряд
-        </p>
+  <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
+    Добровольческий поисково-спасательный отряд
+  </p>
 
-        <div className="mt-4 flex items-center justify-center gap-3">
-          <div className="h-1 w-12 rounded-full bg-gradient-to-r from-blue-600 to-orange-500" />
-          <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-            Помощь • Поиск • Спасение
-          </span>
-          <div className="h-1 w-12 rounded-full bg-gradient-to-l from-blue-600 to-orange-500" />
-        </div>
-      </header>
+  <div className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-400 sm:text-sm">
+    Помощь • Поиск • Спасение
+  </div>
+</header>
     </div>
   );
 }
