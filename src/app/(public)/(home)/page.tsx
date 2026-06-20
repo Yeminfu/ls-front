@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Cause } from "./components/cause";
 import { CAUSES } from "./data/causes.data";
-import { TEAM } from "./data/team.data";
 
 export const metadata: Metadata = {
   title: "Лига Спас — Добровольческий поисково-спасательный отряд",
@@ -17,15 +15,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="bg-slate-50">
-      <section className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-900 via-slate-800 to-orange-600 px-6 py-20 text-white shadow-2xl lg:px-16 lg:py-28">
+      <section className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-900 via-slate-800 to-orange-600 px-6 py-10 text-white shadow-2xl lg:px-16 lg:py-18">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_30%)]" />
 
         <div className="relative z-10 max-w-4xl">
-          <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur">
-            Добровольческий поисково-спасательный отряд
-          </span>
-
-          <h1 className="mt-6 text-5xl font-black leading-tight lg:text-7xl">
+          <h1 className="text-5xl font-black leading-tight lg:text-7xl">
             Помогаем находить людей и спасать жизни
           </h1>
 
@@ -75,7 +69,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-10">
+      {/* <section className="py-10">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
@@ -118,9 +112,9 @@ export default function Home() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="rounded-[32px] bg-gradient-to-r from-blue-700 via-blue-600 to-orange-500 px-8 py-16 text-center text-white shadow-2xl sm:px-16">
           <h3 className="text-4xl font-black">
             Каждая минута может спасти жизнь
@@ -141,7 +135,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
