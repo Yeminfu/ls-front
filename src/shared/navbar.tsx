@@ -2,22 +2,23 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { PHONES } from "@/src/shared/data/contacts";
 
 type MenuItem = {
   text: string;
   link: string;
 };
 
-const HOTLINE_PHONE = "+7 914 167 37 77";
-const HOTLINE_PHONE_HREF = "tel:+79141673777";
+const MENU_ITEMS: MenuItem[] = [
+  { text: "Главная", link: "/" },
+  { text: "О нас", link: "/about" },
+  { text: "Правила", link: "/rules" },
+  { text: "Волонтёрам", link: "/volunteers" },
+  { text: "Контакты", link: "/contacts" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const menuItems: MenuItem[] = [
-    { text: "Главная", link: "/" },
-    { text: "Наша команда", link: "/volunteers" },
-  ];
 
   const closeMenu = () => setIsOpen(false);
 
@@ -27,8 +28,8 @@ export default function Navbar() {
         {/* Левый блок */}
         <div className="flex items-center">
           {/* Десктопное меню */}
-          {/* <div className="hidden items-center gap-6 md:flex">
-            {menuItems.map((item) => (
+          <div className="hidden items-center gap-6 md:flex">
+            {MENU_ITEMS.map((item) => (
               <Link
                 key={item.link}
                 href={item.link}
@@ -37,10 +38,10 @@ export default function Navbar() {
                 {item.text}
               </Link>
             ))}
-          </div> */}
+          </div>
 
           {/* Бургер */}
-          {/* <button
+          <button
             aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
             className="relative h-6 w-6 md:hidden"
             onClick={() => setIsOpen((prev) => !prev)}
@@ -62,20 +63,17 @@ export default function Navbar() {
                 isOpen ? "top-3 -rotate-45" : "top-5"
               }`}
             />
-          </button> */}
+          </button>
         </div>
 
         {/* Правый блок */}
-        <a
-          href={HOTLINE_PHONE_HREF}
-          className="text-right leading-tight"
-        >
+        <a href={PHONES[0].href} className="text-right leading-tight">
           <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-500 sm:text-xs">
             Горячая линия
           </div>
 
           <div className="text-sm font-bold text-orange-600 sm:text-base">
-            {HOTLINE_PHONE}
+            {PHONES[0].label}
           </div>
         </a>
       </div>
@@ -90,7 +88,7 @@ export default function Navbar() {
       >
         <div className="border-t border-slate-200 px-4 py-4">
           <div className="flex flex-col">
-            {menuItems.map((item) => (
+            {MENU_ITEMS.map((item) => (
               <Link
                 key={item.link}
                 href={item.link}
@@ -101,6 +99,13 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
+
+          <a
+            href={PHONES[0].href}
+            className="mt-2 block rounded-lg bg-orange-50 px-3 py-3 text-sm font-bold text-orange-600"
+          >
+            Горячая линия: {PHONES[0].label}
+          </a>
         </div>
       </div>
     </nav>
