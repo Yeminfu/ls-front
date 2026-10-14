@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { TeamSlider } from "@/src/shared/team-slider";
 import { Cause } from "./components/cause";
 import { CAUSES } from "./data/causes.data";
+import { MISSION_INTRO } from "../about/data/mission.data";
+import { TASKS } from "../about/data/tasks.data";
 
 export const metadata: Metadata = {
   title: "Лига Спас — Добровольческий поисково-спасательный отряд",
@@ -39,6 +42,42 @@ export default function Home() {
               Стать волонтёром
             </button>
           </div> */}
+        </div>
+      </section>
+
+      <section aria-label="Кто мы" className="scroll-mt-20 py-20">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
+              Кто мы
+            </p>
+
+            <h2 className="mt-2 text-4xl font-black text-slate-900">
+              Добровольцы, для которых жизнь — высшая ценность
+            </h2>
+
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              {MISSION_INTRO}
+            </p>
+
+            <Link
+              href="/about"
+              className="mt-8 inline-flex rounded-2xl bg-slate-900 px-8 py-4 text-sm font-bold text-white shadow-lg transition hover:scale-[1.02] hover:bg-slate-800"
+            >
+              Подробнее об отряде
+            </Link>
+          </div>
+
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {TASKS.map((task, i) => (
+              <li
+                key={i}
+                className="rounded-2xl border border-slate-200 bg-white p-5 text-sm font-semibold text-slate-700 shadow-sm"
+              >
+                {task.title}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -82,6 +121,35 @@ export default function Home() {
         </div>
 
         <TeamSlider />
+      </section>
+
+      <section aria-label="Стать волонтёром" className="pb-20">
+        <div className="rounded-[32px] bg-gradient-to-r from-blue-700 via-blue-600 to-orange-500 px-8 py-16 text-center text-white shadow-2xl sm:px-16">
+          <h3 className="text-4xl font-black">
+            Каждая минута может спасти жизнь
+          </h3>
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-blue-100">
+            Присоединяйтесь к отряду «Лига Спас», станьте волонтёром или
+            поддержите наши поиски. Вместе мы можем больше.
+          </p>
+
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="/volunteers"
+              className="rounded-2xl bg-white px-8 py-4 text-sm font-bold text-blue-700 shadow-xl transition hover:scale-[1.02] hover:bg-blue-50"
+            >
+              Стать волонтёром
+            </Link>
+
+            <Link
+              href="/contacts"
+              className="rounded-2xl border border-white/20 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
+            >
+              Связаться с нами
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* <section className="py-24">

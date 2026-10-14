@@ -27,6 +27,11 @@ export function Header() {
             Добровольческий поисково-спасательный отряд
           </p>
 
+          <p className="mx-auto mt-2 max-w-xl text-xs leading-relaxed text-slate-500 sm:text-sm">
+            Территориальное подразделение Национального центра помощи пропавшим
+            и пострадавшим детям
+          </p>
+
           <div className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-400 sm:text-sm">
             Помощь • Поиск • Спасение
           </div>
